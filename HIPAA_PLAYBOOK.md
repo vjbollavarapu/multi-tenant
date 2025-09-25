@@ -84,3 +84,5 @@
 * Ongoing compliance checklist.
 * Mapping table for auditors.
 * Prepared Q&A responses for audit readiness.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b4736ddf-83a9-4727-8f9f-d604c81059cf" />
