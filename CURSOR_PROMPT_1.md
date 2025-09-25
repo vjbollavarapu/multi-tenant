@@ -36,7 +36,7 @@
   ```
   Implement middleware that extracts the tenant_id from request headers or JWT claims. 
   Pass tenant_id into the request context so all queries automatically filter by it. 
-  Ensure this integrates with both Django ORM and SQLAlchemy.
+  Ensure this integrates with Django ORM
   ```
 
 * *Purpose:* Automates **tenant awareness per request**.
