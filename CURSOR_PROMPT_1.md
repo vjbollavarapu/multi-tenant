@@ -1,4 +1,4 @@
-# ⚡ Prompt Set for Cursor.AI – Multi-Tenant HEALS Development
+# ⚡ Prompt Set for Cursor.AI – Multi-Tenant Application Development
 
 ## 1. **Architecture & Tenancy Layer**
 
