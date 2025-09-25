@@ -5,7 +5,7 @@
 * *Prompt:*
 
   ```
-  Design a multi-tenant data access layer for Django that supports both row-based tenancy. 
+  Make sure the current multi-tenant data access layer for Django that supports both row-based tenancy. 
   Use PostgreSQL as the database. 
   Include middleware, query filters, and role-based access enforcement. 
   Show best practices for healthcare applications with compliance in mind.
