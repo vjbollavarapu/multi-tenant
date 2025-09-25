@@ -5,7 +5,7 @@
 * *Prompt:*
 
   ```
-  Design a multi-tenant data access layer for Django/FastAPI that supports both row-based and schema-based tenancy. 
+  Design a multi-tenant data access layer for Django that supports both row-based tenancy. 
   Use PostgreSQL as the database. 
   Include middleware, query filters, and role-based access enforcement. 
   Show best practices for healthcare applications with compliance in mind.
@@ -29,21 +29,7 @@
 
 ---
 
-## 3. **Schema Migration Scripts**
-
-* *Prompt:*
-
-  ```
-  Write a Django/FastAPI migration script that consolidates tenant data from multiple schemas 
-  into a single shared schema with a tenant_id column. 
-  Preserve foreign key relationships and indexes.
-  ```
-
-* *Purpose:* For when you switch from schema-based to row-based.
-
----
-
-## 4. **Middleware & Request Context**
+## 3. **Middleware & Request Context**
 
 * *Prompt:*
 
@@ -57,22 +43,7 @@
 
 ---
 
-## 5. **Hybrid Model Support**
-
-* *Prompt:*
-
-  ```
-  Implement a hybrid tenancy manager where small tenants use row-based storage, 
-  and enterprise tenants use schema-based storage. 
-  Write a configuration file that maps tenant IDs to tenancy mode, 
-  and make the data access layer resolve dynamically.
-  ```
-
-* *Purpose:* Lets Cursor generate the **dual-mode flexibility** we discussed.
-
----
-
-## 6. **Compliance & Security**
+## 4. **Compliance & Security**
 
 * *Prompt:*
 
@@ -86,7 +57,7 @@
 
 ---
 
-## 7. **Performance & Scaling**
+## 5. **Performance & Scaling**
 
 * *Prompt:*
 
@@ -94,14 +65,14 @@
   Optimize queries for a large multi-tenant row-based system. 
   Add indexes on tenant_id and common lookup fields. 
   Suggest caching strategies for per-tenant dashboards. 
-  Provide an example Redis caching layer integrated with FastAPI/Django.
+  Provide an example Redis caching layer integrated with Django.
   ```
 
-* *Purpose:* Keeps HEALS scalable even as tenants grow.
+* *Purpose:* Keeps Application scalable even as tenants grow.
 
 ---
 
-## 8. **Testing & Validation**
+## 6. **Testing & Validation**
 
 * *Prompt:*
 
@@ -115,7 +86,7 @@
 
 ---
 
-## 9. **DevOps / Deployment**
+## 7. **DevOps / Deployment**
 
 * *Prompt:*
 
@@ -130,7 +101,7 @@
 
 ---
 
-## 10. **Refactoring Helper**
+## 8. **Refactoring Helper**
 
 * *Prompt:*
 
