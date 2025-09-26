@@ -116,6 +116,26 @@
 
 ---
 
+## 9. **Scan & Fix**
+
+1. Scan all models in the project.
+2. For each model:
+   - If it is **tenant-specific** (e.g., Patient, Appointment, Invoice, Subscription, MedicalRecord, etc.), check if it has:
+     ```python
+     tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE)
+     ```
+     - If missing, add it by inheriting from a shared `BaseTenantModel`.
+   - If it is a **global/shared model** (e.g., Country, Currency, FeatureFlag, ICD10Code, SystemLog), **do NOT add tenant_id**.
+   - For the `AUTH_USER_MODEL`:
+     - If it already has `tenant_id`, leave it unchanged.
+     - If not, add `tenant_id` only if all users belong to a tenant. Otherwise, leave it global for super-admins.
+3. If the model already has `tenant_id`, return `"No changes required."`
+4. Always use `BaseTenantModel` (abstract) for consistency instead of repeating `tenant_id` in multiple models.
+
+## Output
+- A **summary list** of models with their tenant binding status (tenant-specific or global).
+- **Updated code snippets** only for models that require changes.
+- Do **not** modify unrelated code.
 ✅ With these prompt sets, you can **systematically guide Cursor.AI** at every stage:
 
 * Designing → Migrating → Securing → Scaling → Deploying.
