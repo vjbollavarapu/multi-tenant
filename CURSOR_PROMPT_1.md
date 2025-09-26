@@ -109,7 +109,8 @@
   Refactor this code to remove schema-based logic and replace it with row-based logic. 
   Ensure all queries reference tenant_id. 
   Update models, serializers, and views accordingly.
-  ```
+  Please remove all old type urls and replace with new type urls everywhere.
+```
 
 * *Purpose:* Helps during **migration from django-tenants → row-based**.
 
